@@ -1,17 +1,16 @@
 apply plugin: 'com.android.library'
 apply plugin: 'org.jetbrains.kotlin.android'
-apply plugin: 'expo-module-gradle-plugin'
 
 group = 'expo.modules.daycounter'
 version = '1.0.0'
 
 android {
   namespace 'expo.modules.daycounter'
-  compileSdkVersion rootProject.ext.compileSdkVersion
+  compileSdk rootProject.ext.compileSdkVersion
 
   defaultConfig {
-    minSdkVersion rootProject.ext.minSdkVersion
-    targetSdkVersion rootProject.ext.targetSdkVersion
+    minSdk rootProject.ext.minSdkVersion
+    targetSdk rootProject.ext.targetSdkVersion
   }
 }
 
