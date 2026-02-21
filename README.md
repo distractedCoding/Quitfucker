@@ -33,6 +33,7 @@ npx expo run:android
 4. Press **Relax** in app or widget to reset day count to `0`.
 
 The app and widget share state in Android `SharedPreferences` (`quitfucker_day_counter`).
+The app refreshes the counter automatically when it returns to foreground and every minute while open, so date changes are reflected without reinstalling.
 
 ## CI APK artifact download
 

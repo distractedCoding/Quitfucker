@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Pressable, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { AppState, Pressable, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
 import { getCurrentDayCount, getLastResetDate, refreshWidget, setLastResetDateToday } from './src/native/dayCounterModule';
 
 export default function App() {
@@ -21,6 +21,21 @@ export default function App() {
 
   useEffect(() => {
     void loadState();
+
+    const appStateSubscription = AppState.addEventListener('change', (nextState) => {
+      if (nextState === 'active') {
+        void loadState();
+      }
+    });
+
+    const intervalId = setInterval(() => {
+      void loadState();
+    }, 60_000);
+
+    return () => {
+      appStateSubscription.remove();
+      clearInterval(intervalId);
+    };
   }, [loadState]);
 
   return (
