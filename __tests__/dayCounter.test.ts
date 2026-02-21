@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { dayCountSince, ensureResetDate, resetToday, toIsoDate } from '../src/domain/dayCounter';
 
 describe('dayCounter domain', () => {
