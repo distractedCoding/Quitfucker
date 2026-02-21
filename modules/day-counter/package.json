@@ -4,5 +4,8 @@
   "main": "src/index.ts",
   "peerDependencies": {
     "expo": "*"
+  },
+  "dependencies": {
+    "expo-modules-core": "2.2.3"
   }
 }

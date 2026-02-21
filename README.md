@@ -46,4 +46,5 @@ The app and widget share state in Android `SharedPreferences` (`quitfucker_day_c
 
 - Android-only MVP by design.
 - Native files are included as a local Expo module (`modules/day-counter`).
-- The local native module includes `modules/day-counter/android/build.gradle` so Expo autolinking treats it as a separate Android library module (prevents `application + library plugin` collisions in `:app`).
+- Expo autolinking is configured via `app.json` (`expo.autolinking.nativeModulesDir = ./modules`) so the local module is discovered reliably in CI.
+- `expo-modules-core` is pinned to `2.2.3` (the Expo SDK 52-compatible version) to avoid Gradle plugin incompatibilities during APK builds.

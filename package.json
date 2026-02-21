@@ -6,11 +6,13 @@
   "scripts": {
     "start": "expo start",
     "android": "expo run:android",
-    "test": "vitest run"
+    "test": "vitest run",
+    "ios": "expo run:ios"
   },
   "dependencies": {
+    "day-counter": "file:modules/day-counter",
     "expo": "~52.0.0",
-    "expo-modules-core": "^2.1.0",
+    "expo-modules-core": "2.2.3",
     "react": "18.3.1",
     "react-native": "0.76.3"
   },

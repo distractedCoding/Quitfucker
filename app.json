@@ -7,6 +7,9 @@
     "android": {
       "package": "com.quitfucker"
     },
-    "plugins": ["./plugins/withAndroidWidget"]
+    "plugins": ["./plugins/withAndroidWidget"],
+    "autolinking": {
+      "nativeModulesDir": "./modules"
+    }
   }
 }

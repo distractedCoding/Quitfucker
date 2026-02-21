@@ -29,7 +29,12 @@ Key: `lastResetDate`
 
 GitHub Actions workflow:
 
-- Install deps
+- Install deps (`npm ci`)
 - `expo prebuild --platform android`
 - `./gradlew assembleRelease`
 - Upload `app-release.apk` artifact
+
+## CI stability guardrails
+
+- Keep `expo-modules-core` on `2.2.3` with Expo SDK 52 to avoid Gradle plugin mismatch (`com.android.application` + `com.android.library` collision).
+- Keep Expo autolinking pointed at `./modules` (`app.json` → `expo.autolinking.nativeModulesDir`) so the local module is always discovered.
