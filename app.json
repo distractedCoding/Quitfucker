@@ -7,7 +7,10 @@
     "android": {
       "package": "com.quitfucker"
     },
-    "plugins": ["./plugins/withAndroidWidget"],
+    "plugins": [
+      "./plugins/withAndroidWidget",
+      "expo-asset"
+    ],
     "autolinking": {
       "nativeModulesDir": "./modules"
     }
