@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "Quitfucker",
+    "slug": "quitfucker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "android": {
+      "package": "com.quitfucker"
+    },
+    "plugins": ["./plugins/withAndroidWidget"]
+  }
+}
