@@ -15,5 +15,6 @@ android {
 }
 
 dependencies {
+  api project(':expo-modules-core')
   implementation 'com.facebook.react:react-android'
 }
